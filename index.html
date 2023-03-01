@@ -8,16 +8,18 @@
     <title>Billionaire</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.3/flowbite.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
 </head>
 
-<body>
+<body class="font-inter">
     <!-- navbar part start -->
     <header>
         <nav
             class="bg-white px-2 sm:px-4 py-2.5 dark:bg-gray-900 fixed w-full z-20 top-0 left-0 border-b border-gray-200 dark:border-gray-600">
             <div class="container flex flex-wrap items-center justify-between mx-auto">
                 <a href="https://flowbite.com/" class="flex items-center">
-                    <img src="https://flowbite.com/docs/images/logo.svg" class="h-6 mr-3 sm:h-9" alt="Flowbite Logo">
+                    <img src="logo/logo1.png" class="h-6 mr-3 sm:h-9" alt="Flowbite Logo">
                     <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">Billionaire
                         Dairy</span>
                 </a>
@@ -54,11 +56,11 @@
             </div>
         </nav>
     </header>
-    <main class="mt-20">
+    <main class="mt-16 ">
         <section>
             <!-- drawer component -->
             <div id="drawer-example"
-                class="fixed top-0 left-0 z-40 h-screen p-4 overflow-y-auto transition-transform -translate-x-full bg-white w-80 dark:bg-gray-800"
+                class="fixed top-0 left-0 z-40 h-screen p-4 overflow-y-auto transition-transform -translate-x-full w-80 dark:bg-gray-800 bg-bdgray"
                 tabindex="-1" aria-labelledby="drawer-label">
                 <h5 id="drawer-label"
                     class="inline-flex items-center mb-4 text-base font-semibold text-gray-500 dark:text-gray-400"><svg
@@ -78,15 +80,211 @@
                     </svg>
                     <span class="sr-only">Close menu</span>
                 </button>
-                <div>
-                    <h2>Billionaire</h2>
-                    <p>Dairy</p>
+                <div class="text-center text-bgray bg-bgray">
+                    <h2 class="text-offwhite font-extrabold text-lg">Billionaire</h2>
+                    <p class="text-offwhite font-medium text-lg">Dairy</p>
+                    <div class="text-bdgray mb-5 ">
+                        <button class="btn text-lg font-bold py-3 bg-offwhite w-full mt-10">Add a User </button>
+                        <button class="btn text-lg font-bold py-3 bg-offwhite w-full mt-10">Double Money</button>
+                        <button class="btn text-lg font-bold py-3 bg-offwhite w-full mt-10">Sort By Rank </button>
+                        <button class="btn text-lg font-bold py-3 bg-offwhite w-full mt-10">Calculate Entire Wealth
+                        </button>
+                        <hr class="border-2 border-bg-offwhite my-5">
+                        <button class="btn text-lg font-bold py-3 bg-offwhite w-full">Show All Billionaires </button>
+                        <button class="btn text-lg font-bold py-3 bg-offwhite w-full mt-10">Richest by industry</button>
+                        <button class="btn text-lg font-bold py-3 bg-offwhite w-full mt-10">Richest by states</button>
+                    </div>
                 </div>
             </div>
         </section>
+        <section class="bg-white py-6 px-5 md:px-10 ">
+            <!-- search part start -->
+            <form class="">
+                <div class="flex">
+                    <label for="search-dropdown"
+                        class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Your Email</label>
+                    <button id="dropdown-button" data-dropdown-toggle="dropdown"
+                        class="flex-shrink-0 z-10 inline-flex items-center py-2.5 px-4 text-sm font-medium text-center text-gray-900 bg-gray-100 border border-gray-300 rounded-l-lg hover:bg-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100 dark:bg-gray-700 dark:hover:bg-gray-600 dark:focus:ring-gray-700 dark:text-white dark:border-gray-600"
+                        type="button">All categories <svg aria-hidden="true" class="w-4 h-4 ml-1" fill="currentColor"
+                            viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd"
+                                d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                clip-rule="evenodd"></path>
+                        </svg></button>
+                    <div id="dropdown"
+                        class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
+                        <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdown-button">
+                            <li>
+                                <button type="button"
+                                    class="inline-flex w-full px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Mockups</button>
+                            </li>
+                            <li>
+                                <button type="button"
+                                    class="inline-flex w-full px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Templates</button>
+                            </li>
+                            <li>
+                                <button type="button"
+                                    class="inline-flex w-full px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Design</button>
+                            </li>
+                            <li>
+                                <button type="button"
+                                    class="inline-flex w-full px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Logos</button>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="relative w-full">
+                        <input type="search" id="search-dropdown"
+                            class="block p-2.5 w-full z-20 text-sm text-gray-900 bg-gray-50 rounded-r-lg border-l-gray-50 border-l-2 border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-l-gray-700  dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:border-blue-500"
+                            placeholder="Search" required>
+                        <button type="submit"
+                            class="absolute top-0 right-0 p-2.5 text-sm font-medium text-white rounded-r-lg border bg-bdgray focus:ring-4 focus:outline-none ">
+                            <svg aria-hidden="true" class="w-5 h-5" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                            </svg>
+                            <span class="sr-only">Search</span>
+                        </button>
+                    </div>
+                </div>
+            </form>
+
+        </section>
+        <section class="bg-offwhite py-6 px-5 md:px-10 ">
+            <!-- content -->
+            <h3 class="text-bdgray font-bold text-lg">Hello, User!</h3>
+            <!-- table -->
+            <div class="relative overflow-x-auto shadow-md sm:rounded-lg mt-14">
+                <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+                    <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                        <tr>
+                            <th scope="col" class="px-6 py-3">
+                                Person
+                            </th>
+                            <th scope="col" class="px-6 py-3">
+                                Citizenship
+                            </th>
+                            <th scope="col" class="px-6 py-3">
+                                Industry
+                            </th>
+                            <th scope="col" class="px-6 py-3">
+                                Rank
+                            </th>
+                            <th scope="col" class="px-6 py-3">
+                                Wealth
+                            </th>
+                            <th scope="col" class="px-6 py-3">
+                                Details
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody id="table-container">
+                        <tr class="bg-white border-b dark:bg-gray-900 dark:border-gray-700">
+                            <th scope="row"
+                                class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                Jeff Bezos
+                            </th>
+                            <td class="px-6 py-4">
+                                United States
+                            </td>
+                            <td class="px-6 py-4">
+                                Technology
+                            </td>
+                            <td class="px-6 py-4">
+                                3
+                            </td>
+                            <td class="px-6 py-4">
+                                $124317.
+                            </td>
+                            <td class="px-6 py-4">
+                                see
+                            </td>
+                        </tr>
+                        <tr class="border-b bg-gray-50 dark:bg-gray-800 dark:border-gray-700">
+                            <th scope="row"
+                                class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                Microsoft Surface Pro
+                            </th>
+                            <td class="px-6 py-4">
+                                White
+                            </td>
+                            <td class="px-6 py-4">
+                                Laptop PC
+                            </td>
+                            <td class="px-6 py-4">
+                                $1999
+                            </td>
+                            <td class="px-6 py-4">
+                                <a href="#"
+                                    class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
+                            </td>
+                        </tr>
+                        <tr class="bg-white border-b dark:bg-gray-900 dark:border-gray-700">
+                            <th scope="row"
+                                class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                Magic Mouse 2
+                            </th>
+                            <td class="px-6 py-4">
+                                Black
+                            </td>
+                            <td class="px-6 py-4">
+                                Accessories
+                            </td>
+                            <td class="px-6 py-4">
+                                $99
+                            </td>
+                            <td class="px-6 py-4">
+                                <a href="#"
+                                    class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
+                            </td>
+                        </tr>
+                        <tr class="border-b bg-gray-50 dark:bg-gray-800 dark:border-gray-700">
+                            <th scope="row"
+                                class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                Google Pixel Phone
+                            </th>
+                            <td class="px-6 py-4">
+                                Gray
+                            </td>
+                            <td class="px-6 py-4">
+                                Phone
+                            </td>
+                            <td class="px-6 py-4">
+                                $799
+                            </td>
+                            <td class="px-6 py-4">
+                                <a href="#"
+                                    class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row"
+                                class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                Apple Watch 5
+                            </th>
+                            <td class="px-6 py-4">
+                                Red
+                            </td>
+                            <td class="px-6 py-4">
+                                Wearables
+                            </td>
+                            <td class="px-6 py-4">
+                                $999
+                            </td>
+                            <td class="px-6 py-4">
+                                <a href="#"
+                                    class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
     </main>
     <!-- js file link -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.3/flowbite.min.js"></script>
+    <script src="js/custom-tailwind.js"></script>
     <script src="js/index.js"></script>
 </body>
 
